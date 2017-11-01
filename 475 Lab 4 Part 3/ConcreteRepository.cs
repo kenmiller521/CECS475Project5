@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assignment5
+namespace _475_Lab_4_Part_3
 {
-    class ConcreteRepository {
+    class ConcreteRepository
+    {
         public interface ISTatndardRepository : IRepository<Standard>
         public interface IStudentRepository : IRepository<Student>
 
@@ -21,4 +22,3 @@ namespace Assignment5
         }
     }
 }
-

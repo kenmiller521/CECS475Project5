@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{96122162-C17E-4E49-9AA6-18788B4B01B8}</ProjectGuid>
+    <ProjectGuid>{6DDFAE47-C085-46CD-B40B-F18832198765}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Assignment5</RootNamespace>
-    <AssemblyName>Assignment5</AssemblyName>
+    <RootNamespace>BusinessLayer</RootNamespace>
+    <AssemblyName>BusinessLayer</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,11 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConcreteRepository.cs" />
-    <Compile Include="IRepository.cs" />
+    <Compile Include="BusinessLayer.cs" />
+    <Compile Include="IBusinessLayer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

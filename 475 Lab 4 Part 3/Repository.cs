@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assignment5
+namespace _475_Lab_4_Part_3
 {
     class Repository<T> : IRepository<T> where T : class
     {
@@ -56,10 +56,10 @@ namespace Assignment5
 
             foreach (Expression<Func<T, object>> nagivationProperty in nagivationProperties)
                 dbQuery = dbset.Include<T, object>(navigationProperty);
-                item = dbQuery;
+            item = dbQuery;
                 .AsNoTracking()
                 .FirstOrDefault(where);
-                return item;
+            return item;
 
         }
 

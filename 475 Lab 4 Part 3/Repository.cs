@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,24 +15,24 @@ namespace _475_Lab_4_Part_3
         public Repository(DbContext context)
         {
             this.context = context;
-            dbSet = context.Set<T>();
+            dbset = context.Set<T>();
         }
         public void Insert(T Entity)
         {
-            context.Entry(entityState) = EntityState.Added;
-            Context.Savechanges();
+            context.Entry(Entity).State = EntityState.Added;
+            context.SaveChanges();
         }
 
         public void Update(T Entity)
         {
-            context.Entry(entityState) = EntityState.Updated;
-            Context.Savechanges();
+            context.Entry(Entity).State = EntityState.Modified;
+            context.SaveChanges();
         }
 
         public void Delete(T Entity)
         {
-            context.Entry(entityState) = EntityState.Delete;
-            Context.Savechanges();
+            context.Entry(Entity).State = EntityState.Deleted;
+            context.SaveChanges();
         }
         public T GetByID(int id)
         {
